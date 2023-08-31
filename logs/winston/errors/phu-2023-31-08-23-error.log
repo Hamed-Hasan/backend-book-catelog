@@ -1,0 +1,53 @@
+Thu Aug 31 2023 23:11:52 } [PH] error: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "John Doe",
+    email: "john@example.com",
+    password: "john123",
+    ~~~~~~~~
+    role: "customer",
+    contactNo: "1234567890",
+    address: "Dhaka, Bangladesh",
+    profileImg: "user.jpg"
+  }
+}
+
+Unknown argument `password`. Available options are listed in green.
+Thu Aug 31 2023 23:25:37 } [PH] error: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "John Doe",
+    email: "john@example.com",
+    role: "customer",
+    ~~~~
+    contactNo: "1234567890",
+    address: "Dhaka, Bangladesh",
+    profileImg: "user.jpg"
+  }
+}
+
+Unknown argument `role`. Did you mean `name`? Available options are listed in green.
+Thu Aug 31 2023 23:30:38 } [PH] error: 
+Invalid `prisma.user.create()` invocation:
+
+
+The column `password` does not exist in the current database.
+Thu Aug 31 2023 23:32:10 } [PH] error: 
+Invalid `prisma.user.create()` invocation:
+
+
+The column `password` does not exist in the current database.
+Thu Aug 31 2023 23:37:35 } [PH] error: 
+Invalid `prisma.user.create()` invocation:
+
+
+The column `password` does not exist in the current database.
+Thu Aug 31 2023 23:47:10 } [PH] error: 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the fields: (`email`)

@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Next-Level\\book-catelog\\logs\\winston\\successes\\.456b372e02d3469af830549383fb6214a3c1f0a4-audit.json",
+    "files": [
+        {
+            "date": 1693511859404,
+            "name": "D:\\Next-Level\\book-catelog\\logs\\winston\\successes\\phu-2023-31-08-22-success.log",
+            "hash": "cb97fe74d3995fee89535158de816771d9caa9fc11a49a3c0516d93496f38c5c"
+        },
+        {
+            "date": 1693512666879,
+            "name": "D:\\Next-Level\\book-catelog\\logs\\winston\\successes\\phu-2023-31-08-23-success.log",
+            "hash": "08e6f6998bff0fddb4fc7980f32de74db7dfa94cf287a5c775bc6a02efcc0260"
+        },
+        {
+            "date": 1693515689210,
+            "name": "D:\\Next-Level\\book-catelog\\logs\\winston\\successes\\phu-2023-01-09-00-success.log",
+            "hash": "c610974c3ffb3258250f8cfb80c4d98f558016c75d7ae2cd1260d6c30be5adaa"
+        }
+    ],
+    "hashType": "sha256"
+}
