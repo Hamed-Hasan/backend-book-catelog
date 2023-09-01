@@ -1,18 +1,18 @@
-import express from 'express';
-import validateRequest from '../../middlewares/validateRequest';
-import {
-  createUser
-} from './controller.user'; // Import controller functions
-import { UserValidation } from './validation.user';
+// import express from 'express';
+// import validateRequest from '../../middlewares/validateRequest';
+// import {
+//   createUser
+// } from './controller.user'; // Import controller functions
+// import { UserValidation } from './validation.user';
 
-const router = express.Router();
+// const router = express.Router();
 
-router.post(
-  '/signup',
-  validateRequest(UserValidation.createUser),
-  createUser
-);
+// router.post(
+//   '/signup',
+//   validateRequest(UserValidation.createUser),
+//   createUser
+// );
 
 
 
-export const authRoutes = router;
+// export const authRoutes = router;
