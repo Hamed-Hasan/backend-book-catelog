@@ -24,7 +24,24 @@ model User {
   updatedAt   DateTime @updatedAt
 }
 
-model Category {
-  id    String @id @default(uuid())
-  title String
+model Book {
+  id             String   @id @default(uuid())
+  title          String
+  author         String
+  price          Float
+  genre          String
+  publicationDate DateTime
+  categoryId     String   // Reference to Category model
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Define the relationship with Category model
+  category       Category @relation(fields: [categoryId], references: [id])
 }
+
+model Category {
+  id     String   @id @default(uuid())
+  title  String
+  books  Book[]   // Define the reverse relationship with Book model
+}
+

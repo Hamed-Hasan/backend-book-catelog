@@ -3,8 +3,6 @@
 import prisma from "../../../shared/prisma";
 import { CategoryValidation } from "./category.interface";
 
-// Define the CategoryValidation type
-
 
 // Define your service functions
 const createCategory = async (categoryData: CategoryValidation['create']['input']) => {
@@ -24,9 +22,9 @@ const getCategoryById = async (categoryId: string) => {
     where: {
       id: categoryId,
     },
-    // include: {
-    //   books: true, // Include related books
-    // },
+    include: {
+      books: true, // Include related books
+    },
   });
 };
 
