@@ -6,6 +6,14 @@ This is the backend API for the Book Catalog application. It provides endpoints 
 
 [Live Link to the API](https://catelog-book.vercel.app/api/v1/)
 
+
+**Token-Based Authentication:** 
+To ensure data security and access control, certain APIs require an authentication token with the appropriate role for CRUD operations, while others are publicly accessible.
+
+**Role-Based Authorization:** 
+For CRUD actions and sensitive operations, please provide a valid authentication token with the correct role to access these APIs securely.
+
+
 ## Application Routes
 
 ### User
@@ -39,6 +47,10 @@ This is the backend API for the Book Catalog application. It provides endpoints 
 - `POST https://catelog-book.vercel.app/api/v1/orders/create-order`: Create a new order.
 - `GET https://catelog-book.vercel.app/api/v1/orders`: Get a list of all orders.
 - `GET https://catelog-book.vercel.app/api/v1/orders/:orderId`: Get a single order by order ID. Replace `:orderId` with a valid order ID from the database.
+
+## profile
+
+- `GET https://catelog-book.vercel.app/api/v1/profile`: Get a single profile by profile ID. Replace `:profileId` with a valid profile ID from the database.
 
 Feel free to use these routes to interact with the Book Catalog Backend API. Make requests to the appropriate endpoints to manage users, categories, books, and orders.
 
