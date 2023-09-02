@@ -1,6 +1,6 @@
 # Book Catalog Backend
 
-This is the backend API for the Book Catalog application. It provides endpoints to manage users, categories, books, and orders.
+This robust backend API powers the Book Catalog application, implementing custom authentication and role-based authorization for managing users, categories, books, and orders.
 
 ## Live Link
 
