@@ -7,6 +7,9 @@ This robust backend API powers the Book Catalog application, implementing custom
 [Live Link to the API](https://catelog-book.vercel.app/api/v1/)
 
 
+![ERD Diagram](https://i.ibb.co/dQshCfm/ERD-BOOK-CATELOG.png)
+
+
 **Token-Based Authentication:** 
 To ensure data security and access control, certain APIs require an authentication token with the appropriate role for CRUD operations, while others are publicly accessible.
 
@@ -51,6 +54,11 @@ For CRUD actions and sensitive operations, please provide a valid authentication
 ## profile
 
 - `GET https://catelog-book.vercel.app/api/v1/profile`: Get a single profile by profile ID. Replace `:profileId` with a valid profile ID from the database.
+
+
+
+[**API Documentation (Postman)**](https://documenter.getpostman.com/view/20661145/2s9Y5cufrs)
+
 
 Feel free to use these routes to interact with the Book Catalog Backend API. Make requests to the appropriate endpoints to manage users, categories, books, and orders.
 
