@@ -1,9 +1,25 @@
-// bookUtils.ts
-
 import { Request } from 'express';
 
 export const getBookQueryOptions = (req: Request) => {
-  const { page = 1, size = 10, sortBy = 'createdAt', sortOrder = 'desc', minPrice, maxPrice, category, search } = req.query;
+  const {
+    page = '1',
+    size = '10',
+    sortBy = 'createdAt',
+    sortOrder = 'desc',
+    minPrice,
+    maxPrice,
+    category,
+    search,
+  } = req.query as {
+    page?: string;
+    size?: string;
+    sortBy?: string;
+    sortOrder?: string;
+    minPrice?: string;
+    maxPrice?: string;
+    category?: string;
+    search?: string;
+  };
 
   const paginationOptions = {
     skip: (Number(page) - 1) * Number(size),

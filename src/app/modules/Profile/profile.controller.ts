@@ -32,7 +32,7 @@ export const UserProfileController = {
         message: 'User profile retrieved successfully',
         data: userProfile,
       });
-    } catch (error) {
+    } catch (error: any) {
       res.status(error.statusCode || httpStatus.INTERNAL_SERVER_ERROR).json({
         success: false,
         statusCode: error.statusCode || httpStatus.INTERNAL_SERVER_ERROR,

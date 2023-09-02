@@ -23,7 +23,7 @@ export const AuthService = {
       });
 
       return newUser;
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, error.message);
     }
   },
@@ -31,7 +31,7 @@ export const AuthService = {
   signin: async (email: string, password: string): Promise<string> => {
     try {
       const user = await prisma.user.findUnique({ where: { email } });
-        console.log(user?.role)
+        // console.log(user?.role)
       if (!user) {
         throw new ApiError(httpStatus.UNAUTHORIZED, 'Invalid email or password');
       }
@@ -47,7 +47,7 @@ export const AuthService = {
       });
 
       return token;
-    } catch (error) {
+    } catch (error: any) {
       throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, error.message);
     }
   },

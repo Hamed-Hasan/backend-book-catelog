@@ -40,11 +40,11 @@ export const BookService = {
 
   getBooksByCategoryId: async (categoryId: string): Promise<Book[]> => {
     try {
-      console.log("Fetching books by category with ID:", categoryId);
+      // console.log("Fetching books by category with ID:", categoryId);
       const books = await prisma.book.findMany({
         where: { categoryId },
       });
-      console.log("Fetched books:", books);
+      // console.log("Fetched books:", books);
       return books;
     } catch (error) {
       console.error("Error fetching books by category:", error);

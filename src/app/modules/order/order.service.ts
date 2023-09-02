@@ -20,7 +20,7 @@ import prisma from "../../../shared/prisma";
           } else {
             throw new Error('Invalid role');
           }
-        } catch (error) {
+        } catch (error: any) {
           throw new Error(error.message);
         }
       },

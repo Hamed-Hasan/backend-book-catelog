@@ -15,7 +15,7 @@ export const OrderController = {
         message: "Order created successfully",
         data: order,
       });
-    } catch (error) {
+    } catch (error: any) {
       res.status(error.statusCode || httpStatus.INTERNAL_SERVER_ERROR).json({
         success: false,
         statusCode: error.statusCode || httpStatus.INTERNAL_SERVER_ERROR,
@@ -46,7 +46,7 @@ export const OrderController = {
         message: 'Orders retrieved successfully',
         data: orders,
       });
-    } catch (error) {
+    } catch (error: any) {
       res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
         success: false,
         statusCode: httpStatus.INTERNAL_SERVER_ERROR,
@@ -72,8 +72,10 @@ export const OrderController = {
       }
 
       // Check if the user is authorized to access this order
+    // Check if the user is authorized to access this order
       const user = req.user;
-      if (user.role !== "admin" && user.userId !== order.userId) {
+
+      if (user?.role !== "admin" && user?.userId !== order.userId) {
         return res.status(httpStatus.FORBIDDEN).json({
           success: false,
           statusCode: httpStatus.FORBIDDEN,
@@ -82,13 +84,14 @@ export const OrderController = {
         });
       }
 
+
       res.status(httpStatus.OK).json({
         success: true,
         statusCode: httpStatus.OK,
         message: "Order fetched successfully",
         data: order,
       });
-    } catch (error) {
+    } catch (error: any) {
       res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
         success: false,
         statusCode: httpStatus.INTERNAL_SERVER_ERROR,

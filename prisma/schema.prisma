@@ -23,6 +23,7 @@ model User {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   orders      Order[] 
+  reviews ReviewAndRating[]
 }
 
 model Book {
@@ -32,18 +33,17 @@ model Book {
   price          Float
   genre          String
   publicationDate DateTime
-  categoryId     String   // Reference to Category model
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
-
-  // Define the relationship with Category model
+  reviews ReviewAndRating[]
+  categoryId     String 
   category       Category @relation(fields: [categoryId], references: [id])
 }
 
 model Category {
   id     String   @id @default(uuid())
   title  String
-  books  Book[]   // Define the reverse relationship with Book model
+  books  Book[]   
 }
 
 model Order {
@@ -54,4 +54,15 @@ model Order {
   updatedAt   DateTime   @updatedAt
   userId      String
   user        User       @relation(fields: [userId], references: [id])
+}
+
+
+model ReviewAndRating {
+  id     String   @id @default(uuid())
+  review String
+  rating Int
+  userId String
+  bookId String
+  user   User     @relation(fields: [userId], references: [id])
+  book   Book     @relation(fields: [bookId], references: [id])
 }
